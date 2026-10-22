@@ -86,7 +86,13 @@ button { cursor: pointer; }
 .side-foot .btn.ghost { color: #fff; border-color: rgba(255, 255, 255, .35); }
 .side-foot .btn.ghost:hover { background: rgba(255, 255, 255, .12); }
 
-main { padding: 28px 32px 60px; max-width: 1180px; width: 100%; }
+main {
+  padding: 28px 32px 60px;
+  width: 100%;
+  max-width: 1480px;   /* raised from 1180px so zoomed-out screens fill better */
+  margin: 0 auto;      /* centers content instead of left-pinning it */
+  min-width: 0;        /* stops wide children from stretching the grid column */
+}
 .topbar { min-height: 48px; display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: -8px 0 28px; }
 .global-search { display: flex; align-items: center; gap: 10px; width: min(480px, 60vw); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; color: var(--muted); }
 .global-search input { border: 0; outline: 0; background: transparent; width: 100%; padding: 2px; }
